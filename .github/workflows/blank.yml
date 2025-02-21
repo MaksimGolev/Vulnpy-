@@ -34,6 +34,9 @@ jobs:
           cd ../good && python3 db_init.py
           cd ..
 
+      - name: Установить Bandit
+        run: pip install bandit
+
       - name: Запустить Bandit и сохранить отчёт
         run: |
           cd vulnpy
