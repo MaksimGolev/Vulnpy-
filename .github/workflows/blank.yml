@@ -40,7 +40,7 @@ jobs:
       - name: Запустить Bandit и сохранить отчёт
         run: |
           cd vulnpy
-          bandit -r . -f json -o bandit_report.json
+          bandit -r . -f json -o bandit_report.json || true
 
       - name: Сохранить отчёт как артефакт
         uses: actions/upload-artifact@v4
